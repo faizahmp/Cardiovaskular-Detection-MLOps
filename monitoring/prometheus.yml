@@ -10,3 +10,9 @@ scrape_configs:
     metrics_path: /monitoring/prometheus/metrics
     static_configs:
       - targets: ["diplomatic-luck-production.up.railway.app"]
+
+remote_write:
+  - url: https://prometheus-prod-13-prod-us-east-0.grafana.net/api/prom/push
+    basic_auth:
+      username: 1710407
+      password: "API_KEY"
